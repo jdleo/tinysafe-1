@@ -12,6 +12,8 @@ Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, Tox
 
 **Model on HuggingFace:** [jdleo1/tinysafe-1](https://huggingface.co/jdleo1/tinysafe-1)
 
+**Blog post:** [How TinySafe was built](https://jdleo.me/blog/tinysafe)
+
 ## ToxicChat F1
 
 | Model | Params | F1 |
