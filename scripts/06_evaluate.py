@@ -209,7 +209,7 @@ def print_comparison_table(results: dict):
     print(header)
     print("-" * len(header))
     or_fpr = f"{orb.get('fpr', 0)*100:.1f}%"
-    print(f"{'Ours (DeBERTa-xsmall)':<30} {'22M':<10} {tc.get('f1_binary', 0):<10.4f} {wg.get('f1_binary', 0):<10.4f} {or_fpr:<10} {'~2ms':<10}")
+    print(f"{'TinySafe v1':<30} {'22M':<10} {tc.get('f1_binary', 0):<10.4f} {wg.get('f1_binary', 0):<10.4f} {or_fpr:<10} {'~2ms':<10}")
     print(f"{'WildGuard-7B':<30} {'7B':<10} {'~0.92':<10} {'~0.90':<10} {'~10%':<10} {'~500ms':<10}")
     print(f"{'LlamaGuard-3-8B':<30} {'8B':<10} {'~0.90':<10} {'~0.88':<10} {'~12%':<10} {'~600ms':<10}")
     print(f"{'ToxicBERT':<30} {'110M':<10} {'~0.82':<10} {'~0.78':<10} {'~25%':<10} {'~10ms':<10}")

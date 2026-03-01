@@ -1,14 +1,16 @@
-# safety-distill
+# TinySafe v1
 
 A 22M parameter safety classifier built on DeBERTa-v3-xsmall. Dual-head architecture: binary safe/unsafe classification + 7-category multi-label breakdown (violence, hate, sexual, self-harm, dangerous info, harassment, illegal activity).
 
 Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, ToxiGen, ToxicChat, XSTest, HarmBench, SORRY-Bench) plus synthetic data, labeled via Claude Batch API with Sonnet QA verification.
 
+**Model on HuggingFace:** [jdleo/tinysafe-1](https://huggingface.co/jdleo/tinysafe-1)
+
 ## Results
 
 | Model | Params | WildGuard F1 | ToxicChat F1 | OR-Bench FPR | Latency |
 |---|---|---|---|---|---|
-| **safety-distill** | **22M** | **0.75** | **0.59** | **18.9%** | **~2ms** |
+| **TinySafe v1** | **22M** | **0.75** | **0.59** | **18.9%** | **~2ms** |
 | WildGuard-7B | 7B | ~0.90 | ~0.92 | ~10% | ~500ms |
 | LlamaGuard-3-8B | 8B | ~0.88 | ~0.90 | ~12% | ~600ms |
 | ToxicBERT | 110M | ~0.78 | ~0.82 | ~25% | ~10ms |
