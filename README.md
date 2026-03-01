@@ -4,7 +4,7 @@
 
 Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, ToxiGen, ToxicChat, XSTest, HarmBench, SORRY-Bench) plus synthetic data, labeled via Claude Batch API with Sonnet QA verification.
 
-**Model on HuggingFace:** [jdleo/tinysafe-1](https://huggingface.co/jdleo/tinysafe-1)
+**Model on HuggingFace:** [jdleo1/tinysafe-1](https://huggingface.co/jdleo1/tinysafe-1)
 
 ## ToxicChat F1
 
