@@ -46,30 +46,11 @@ uv run python scripts/05_train.py
 ```
 
 ## Pipeline
-
-| Script | What it does |
-|---|---|
-| `01_download_datasets.py` | Downloads and normalizes public safety datasets |
-| `02_generate_synthetic.py` | Generates synthetic training data via Claude |
-| `03_label_with_claude.py` | Labels all data through Claude Batch API |
-| `04_quality_filter.py` | Dedup, contamination filter, train/val/test split |
-| `05_train.py` | Trains the dual-head DeBERTa classifier |
-| `05b_leave_one_out.py` | Leave-one-dataset-out robustness eval |
-| `05c_threshold_sweep.py` | Sweeps binary decision threshold on val set |
-| `06_evaluate.py` | Benchmarks against ToxicChat, WildGuardBench, OR-Bench |
-| `07_export.py` | Exports to ONNX (fp32 + INT8 quantized) |
+<img width="1140" height="224" alt="image" src="https://github.com/user-attachments/assets/354a711f-ae20-4844-be94-21ab33004466" />
 
 ## Architecture
+<img width="531" height="716" alt="image" src="https://github.com/user-attachments/assets/b7ef4db2-ce2a-40fb-8161-1c81f0ce3a58" />
 
-```
-DeBERTa-v3-xsmall (384-dim)
-    |
-  [CLS] token
-   / \
-  /   \
-Binary  Category
-Head    Head (7)
-```
 
 Binary head uses focal loss (gamma=2.0). Category head uses BCE weighted at 0.5x. AdamW with linear warmup + decay.
 
