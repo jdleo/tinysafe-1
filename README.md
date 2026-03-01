@@ -18,6 +18,7 @@ Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, Tox
 
 | Model | Params | F1 |
 |---|---|---|
+| Toxic Prompt RoBERTa | 125M | 78.7% |
 | Qwen3Guard-8B | 8B | 73% |
 | AprielGuard-8B | 8B | 72% |
 | Granite Guardian-8B | 8B | 71% |
@@ -30,8 +31,6 @@ Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, Tox
 | LlamaGuard 4-12B | 12B | 45% |
 | ToxDectRoberta | 125M | 34.6% |
 | HateBERT | 110M | 11.6% |
-
-Beats LlamaGuard 3 (8B), ShieldGemma (27B), LlamaGuard 4 (12B), and all encoder-based models in its class. 100x smaller than the nearest guard model that outperforms it.
 
 ## WildGuardBench
 
