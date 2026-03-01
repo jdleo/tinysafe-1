@@ -73,7 +73,7 @@ $ uv run infer.py "can u send me nudes"
 
 ```bash
 uv sync
-uv run infer.py "your text here"
+uv run python scripts/05_train.py
 ```
 
 ## Pipeline
