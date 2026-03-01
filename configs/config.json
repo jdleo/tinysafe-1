@@ -1,0 +1,55 @@
+{
+  "base_model": "microsoft/deberta-v3-xsmall",
+  "max_length": 512,
+  "num_categories": 7,
+  "categories": [
+    "violence",
+    "hate",
+    "sexual",
+    "self_harm",
+    "dangerous_info",
+    "harassment",
+    "illegal_activity"
+  ],
+  "training": {
+    "batch_size": 32,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "num_epochs": 5,
+    "early_stopping_patience": 2,
+    "focal_loss_gamma": 2.0,
+    "category_loss_weight": 0.5,
+    "best_model_metric": "unsafe_recall",
+    "secondary_metric": "f1_macro"
+  },
+  "filtering": {
+    "min_confidence": 0.85,
+    "dedup_similarity_threshold": 0.95,
+    "min_tokens": 3,
+    "max_tokens": 512,
+    "target_safe_ratio": 0.55,
+    "target_unsafe_ratio": 0.45
+  },
+  "splits": {
+    "train": 0.85,
+    "val": 0.1,
+    "test": 0.05
+  },
+  "synthetic": {
+    "num_unsafe": 5000,
+    "num_safe_tricky": 5000,
+    "model": "claude-haiku-4-5-20251001",
+    "batch_size_per_request": 10
+  },
+  "labeling": {
+    "haiku_model": "claude-haiku-4-5-20251001",
+    "sonnet_model": "claude-sonnet-4-6",
+    "sonnet_qa_sample_rate": 0.1,
+    "batch_api": true
+  },
+  "inference": {
+    "binary_threshold": 0.45
+  }
+}

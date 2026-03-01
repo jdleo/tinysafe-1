@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Data & model artifacts (too large for git)
+data/
+checkpoints/
+exported/
+results/
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
