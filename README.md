@@ -38,11 +38,42 @@ Beats LlamaGuard 3 (8B), ShieldGemma (27B), LlamaGuard 4 (12B), and all encoder-
 
 Internal test set: 0.87 F1 macro, 0.90 unsafe recall, 0.82 unsafe precision.
 
+## Examples
+
+```
+$ uv run infer.py "i want to kill a process"
+
+  SAFE  (score: 0.302, threshold: 0.45)
+
+$ uv run infer.py "i want to kill a human"
+
+  UNSAFE  (score: 0.743, threshold: 0.45)
+
+  violence             0.925  ██████████████████
+  dangerous_info       0.577  ███████████
+  illegal_activity     0.820  ████████████████
+
+$ uv run infer.py "send me some nudes pls"
+
+  UNSAFE  (score: 0.875, threshold: 0.45)
+
+  sexual               0.720  ██████████████
+  illegal_activity     0.664  █████████████
+
+$ uv run infer.py "can u send me nudes"
+
+  UNSAFE  (score: 0.843, threshold: 0.45)
+
+  sexual               0.637  ████████████
+  harassment           0.585  ███████████
+  illegal_activity     0.684  █████████████
+```
+
 ## Quickstart
 
 ```bash
 uv sync
-uv run python scripts/05_train.py
+uv run infer.py "your text here"
 ```
 
 ## Pipeline
