@@ -1,6 +1,10 @@
 # TinySafe v1
 
 ![Monthly Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2Fjdleo1%2Ftinysafe-1&query=%24.downloads&label=%F0%9F%A4%97%20Monthly%20Downloads&color=blue)
+![Parameters](https://img.shields.io/badge/params-71M-orange)
+![License](https://img.shields.io/github/license/jdleo/tinysafe-1)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97-Model%20Card-yellow)](https://huggingface.co/jdleo1/tinysafe-1)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white)
 
 71M parameter safety classifier built on DeBERTa-v3-xsmall. Dual-head architecture: binary safe/unsafe + 7-category multi-label (violence, hate, sexual, self-harm, dangerous info, harassment, illegal activity).
 
