@@ -1,5 +1,7 @@
 # TinySafe v1
 
+![Monthly Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2Fjdleo1%2Ftinysafe-1&query=%24.downloads&label=%F0%9F%A4%97%20Monthly%20Downloads&color=blue)
+
 71M parameter safety classifier built on DeBERTa-v3-xsmall. Dual-head architecture: binary safe/unsafe + 7-category multi-label (violence, hate, sexual, self-harm, dangerous info, harassment, illegal activity).
 
 Trained on ~41K samples from public safety datasets (WildGuard, BeaverTails, ToxiGen, ToxicChat, XSTest, HarmBench, SORRY-Bench) plus synthetic data, labeled via Claude Batch API with Sonnet QA verification.
