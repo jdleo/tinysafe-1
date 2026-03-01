@@ -1,7 +1,7 @@
 [project]
-name = "safety-distill"
+name = "tinysafe-1"
 version = "0.1.0"
-description = "Distilled dual-head safety classifier from Claude"
+description = "22M parameter dual-head safety classifier"
 requires-python = ">=3.11"
 dependencies = [
     "torch>=2.1.0",
